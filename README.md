@@ -9,4 +9,4 @@ Here you can find the following functionality:
 3) Ability to withdraw and deposit money;
 4) Ability to exit the application.
 
-Another fixes and extensions and additions will come later.
+Another fixes and extensions, additions will come later.
