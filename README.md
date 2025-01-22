@@ -7,6 +7,7 @@ Here you can find the following functionality:
 - checking account
 - saving account
 3) Ability to withdraw and deposit money;
-4) Ability to exit the application.
+4) Ability to transfer funds from one account to another;
+5) Ability to exit the application (no timeout is implemented yet).
 
 Another fixes and extensions, additions will come later.

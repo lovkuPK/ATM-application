@@ -126,6 +126,39 @@ public class Account {
 
     }
 
+    public void sendMoneyToSavingAccount(){
+        System.out.println("Checking Account Balance: " + moneyFormat.format(checkingBalance));
+        System.out.print("Enter the amount you want to transfer to Saving Account: ");
+        double amount = input.nextDouble();
+
+        if (checkingBalance - amount >= 0) {
+            checkingBalance -= amount;
+            savingBalance +=amount;
+
+            System.out.println("New Checking Account Balance: " + moneyFormat.format(checkingBalance));
+            System.out.println("New Saving Account Balance: " + moneyFormat.format(savingBalance));
+
+        } else {
+            System.out.println("Balance cannot be Negative." + "\n");
+        }
+    }
+
+    public void sendMoneyToCheckingAccount(){
+        System.out.println("Saving Account Balance: " + moneyFormat.format(savingBalance));
+        System.out.print("Enter the amount you want to transfer to Checking Account: ");
+        double amount = input.nextDouble();
+
+        if (savingBalance - amount >= 0) {
+           savingBalance -= amount;
+           checkingBalance +=amount;
+
+            System.out.println("New Saving Account Balance: " + moneyFormat.format(savingBalance));
+            System.out.println("New Checking Account Balance: " + moneyFormat.format(checkingBalance));
+
+        } else {
+            System.out.println("Balance cannot be Negative." + "\n");
+        }
+    }
 
 }
 
