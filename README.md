@@ -7,7 +7,12 @@ Here you can find the following functionality:
 - checking account
 - saving account
 3) Ability to withdraw and deposit money;
-4) Ability to transfer funds from one account to another;
-5) Ability to exit the application (no timeout is implemented yet).
+4) Ability to transfer funds from one account to another
+(added with the second commit);
+5) Time-out ability to exit the application, if no login or
+PIN-code were entered (added with the third commit).
+
+P.S. OptionMenu class is obsolete, because it does not
+contain point #5. It is included to repo for a reference.
 
 Another fixes and extensions, additions will come later.
