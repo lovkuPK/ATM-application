@@ -76,8 +76,7 @@ public class OptionMenu1 extends Account{
                 break;
 
             case 3:
-                //viewTransactionHistory();
-                System.out.println("This functionality is in work");
+                TransactionLogger.viewTransactionHistory();
                 break;
 
             case 4:
