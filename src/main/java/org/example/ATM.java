@@ -2,7 +2,7 @@ package org.example;
 
 import java.io.IOException;
 
-public class ATM extends OptionMenu1{
+public class ATM  {
 
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub

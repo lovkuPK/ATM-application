@@ -1,17 +1,21 @@
 package org.example;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
 
 public class OptionMenu1 extends Account{
     Scanner menuInput = new Scanner(System.in);
-    HashMap<Integer, Integer> data = new HashMap<>();
+    private static final HashMap<Integer, Integer> data = new HashMap<>(){{
+        put(952141, 191904);
+        put(989947, 71976);
+    }};
 
-    public void getLogin() throws IOException{
-        data.put(952141, 191904);
-        data.put(989947, 71976);
+    public void getLogin() {
+
 
         System.out.println("Welcome to the ATM project!");
         // Atomic flag to track user activity
@@ -58,12 +62,21 @@ public class OptionMenu1 extends Account{
     public void getAccountType() {
         //this method accesses the account chosen
         System.out.println("Select the Account You Want to Access: ");
-        System.out.println(" Type 1 - Checking Account");
-        System.out.println(" Type 2 - Saving Account");
-        System.out.println(" Type 3 - View Transaction History");
-        System.out.println(" Type 4 - Transfer Funds Between Accounts");
-        System.out.println(" Type 5 - Exit");
 
+//        System.out.println(" Type 1 - Checking Account");
+//        System.out.println(" Type 2 - Saving Account");
+//        System.out.println(" Type 3 - View Transaction History");
+//        System.out.println(" Type 4 - Transfer Funds Between Accounts");
+//        System.out.println(" Type 5 - Exit");
+        for (AccountType option:AccountType.values()){
+            System.out.println(option.getName());
+
+//            Arrays.stream(AccountType.values())
+//                    .map(AccountType::getName)
+//                    .forEach(System.out::println);
+
+
+        }//change the code above with streams
         int selection = menuInput.nextInt();
 
         switch (selection) {

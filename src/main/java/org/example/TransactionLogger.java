@@ -17,9 +17,9 @@ public class TransactionLogger {
     public static void logTransaction (String message){
 
         String timestamp = LocalDateTime.now().format(formatter);
-        String logEntry = "[" + timestamp + "] " + message;
+        String logEntry = String.format("[%s] %s", timestamp, message);
 
-        Logger.info(logEntry);
+        //Logger.info("[{}] {}", timestamp, message);
         sessionLogs.add(logEntry);
     }
     //this method views all the transaction history
