@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.stream.Stream;
-
 public enum AccountType {
 
     //we use this enumeration instead of multiple prints of options
