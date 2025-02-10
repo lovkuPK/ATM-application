@@ -17,7 +17,6 @@ public class Account {
 
     public void setCustomerNumber(int customerNumber) {
         this.customerNumber = customerNumber;
-
     }
 
     public int getPinNumber() {
@@ -26,7 +25,6 @@ public class Account {
 
     public void setPinNumber(int pinNumber) {
         this.pinNumber = pinNumber;
-
     }
 
     public double getCheckingBalance() {
@@ -44,22 +42,18 @@ public class Account {
     //withdrawal and deposit (a pair for each)
     public void calcCheckingWithdraw(double amount) {
         checkingBalance = (checkingBalance - amount);
-
     }
 
     public void calcSavingWithdraw(double amount) {
         savingBalance = (savingBalance - amount);
-
     }
 
     public void calcCheckingDeposit(double amount) {
         checkingBalance = (checkingBalance + amount);
-
     }
 
     public void calcSavingDeposit(double amount) {
         savingBalance = (savingBalance + amount);
-
     }
     //now the business-logic methods follow:
     //1)withdrawing the money from checking account

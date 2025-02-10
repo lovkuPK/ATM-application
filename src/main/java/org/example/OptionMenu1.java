@@ -1,11 +1,9 @@
 package org.example;
 
-import java.io.IOException;
-import java.util.Arrays;
+
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.stream.Collectors;
 
 public class OptionMenu1 extends Account{
     Scanner menuInput = new Scanner(System.in);
@@ -15,7 +13,6 @@ public class OptionMenu1 extends Account{
     }};
 
     public void getLogin() {
-
 
         System.out.println("Welcome to the ATM project!");
         // Atomic flag to track user activity
@@ -63,20 +60,10 @@ public class OptionMenu1 extends Account{
         //this method accesses the account chosen
         System.out.println("Select the Account You Want to Access: ");
 
-//        System.out.println(" Type 1 - Checking Account");
-//        System.out.println(" Type 2 - Saving Account");
-//        System.out.println(" Type 3 - View Transaction History");
-//        System.out.println(" Type 4 - Transfer Funds Between Accounts");
-//        System.out.println(" Type 5 - Exit");
         for (AccountType option:AccountType.values()){
             System.out.println(option.getName());
 
-//            Arrays.stream(AccountType.values())
-//                    .map(AccountType::getName)
-//                    .forEach(System.out::println);
-
-
-        }//change the code above with streams
+        }
         int selection = menuInput.nextInt();
 
         switch (selection) {
@@ -109,11 +96,12 @@ public class OptionMenu1 extends Account{
     public void getChecking() {
         //this is the account checking functionality
         System.out.println("Checking Account: ");
-        System.out.println(" Type 1 - View Balance");
-        System.out.println(" Type 2 - Withdraw Funds");
-        System.out.println(" Type 3 - Deposit Funds");
-        System.out.println(" Type 4 - Exit");
 
+        for (CheckingAccountEnum choice:CheckingAccountEnum.values()) {
+            System.out.println(choice.getCheckAccName());
+        }
+
+        System.out.println("Choice: ");
         int selection = menuInput.nextInt();
 
         switch (selection) {
@@ -145,10 +133,11 @@ public class OptionMenu1 extends Account{
     public void getSaving() {
         //this is the account saving functionality
         System.out.println("Saving Account: ");
-        System.out.println(" Type 1 - View Balance");
-        System.out.println(" Type 2 - Withdraw Funds");
-        System.out.println(" Type 3 - Deposit Funds");
-        System.out.println(" Type 4 - Exit");
+
+        for (SavingAccountEnum alternative:SavingAccountEnum.values()) {
+            System.out.println(alternative.getSaveAccName());
+        }
+
         System.out.println("Choice: ");
 
         int selection = menuInput.nextInt();
